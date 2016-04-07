@@ -1,0 +1,50 @@
+.row, .rowReverse {
+	display: flex;
+	flex-direction: row;
+	width: 85%;
+	margin: 2em auto;
+	justify-content: center;
+}
+
+.rowReverse {
+	flex-direction: row-reverse;
+}
+
+.row div, .rowReverse div {
+	max-width: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.elevatorPitch {
+	max-width: 50%;
+}
+
+.bigPicture {
+	max-width: 85%;
+	margin: 1em auto;
+	text-align: center;
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 2em;
+}
+
+@media (max-width: 600px) {
+	.row, .rowReverse {
+		flex-direction: column;
+	}
+
+	.row div, .rowReverse div {
+		max-width: 100%;
+		display: block;
+	}
+
+	.row div img, .rowReverse div img {
+		margin: 1em auto;
+		display: block;
+	}
+	.elevatorPitch {
+		max-width: 75%;
+	}
+}
